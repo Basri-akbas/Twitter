@@ -5,9 +5,12 @@ import io.cucumber.java.en.Then;
 
 import pages.Twitterpage;
 import utilities.Driver;
+
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+
 
 public class Twitter {
     Twitterpage page=new Twitterpage();
@@ -74,8 +77,9 @@ public class Twitter {
     }
 
     @Then("benutzer drückt twitButton")
-    public void benutzer_drückt_twitButton() {
+    public void benutzer_drückt_twitButton() throws IOException {
         page.twitButton.click();
+        Driver.screenSchot1();
     }
 
 }
